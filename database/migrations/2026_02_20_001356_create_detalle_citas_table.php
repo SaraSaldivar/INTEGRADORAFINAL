@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('cita_id')->constrained('citas')->onDelete('cascade');
             $table->foreignId('servicio_id')->constrained('servicios')->onDelete('cascade');
-            $table->double('precio_capturado');
+            $table->decimal('precio_capturado' , 10, 2)->default(0);
             $table->timestamps();
         });
     }

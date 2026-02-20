@@ -25,7 +25,7 @@ class ServicioRequest extends FormRequest
             
             'nombre' => 'required|string|max:255',
             'precio' => 'required|numeric|min:0',
-            'descripcion' => 'required|string|max:1000',
+            'descripcion' => 'nullable|string|max:1000',
             'activo' => 'boolean',
             'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'tiempo_estimado' => 'required|integer|min:1',
@@ -37,7 +37,6 @@ class ServicioRequest extends FormRequest
         return [
             'nombre.required' => 'El nombre del servicio es obligatorio.',
             'precio.required' => 'El precio del servicio es obligatorio.',
-            'descripcion.required' => 'La descripción del servicio es obligatoria.',
             'activo.boolean' => 'El campo activo debe ser verdadero o falso.',
             'imagen.image' => 'La imagen debe ser un archivo de imagen válido.',
             'tiempo_estimado.required' => 'El tiempo estimado es obligatorio.',

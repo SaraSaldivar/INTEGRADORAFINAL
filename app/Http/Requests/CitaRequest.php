@@ -31,7 +31,7 @@ class CitaRequest extends FormRequest
         ];
     }
 
-    public function messaes() {
+    public function messages() {
 
         return [
             'apartado.required' => 'El apartado es obligatorio.',
