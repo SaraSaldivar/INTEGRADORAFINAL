@@ -15,4 +15,16 @@ class Cliente extends Model
         'user_id'
 
     ];
+
+    public function citas()
+    {
+        return $this->hasMany(Cita::class);
+    }
+
+    public function user() {
+
+        return $this->belongsTo(User::class);
+    }
+
+    
 }

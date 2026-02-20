@@ -11,4 +11,11 @@ class Tipo_Servicio extends Model
         'nombre'
     
     ];
+
+
+    public function servicios()
+    {
+        return $this->hasMany(Servicio::class, 'tipo_servicio_id');
+
+    }
 }
