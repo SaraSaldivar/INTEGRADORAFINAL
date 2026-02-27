@@ -3,6 +3,13 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Models\Cita;
+use App\Models\Cliente;
+use App\Models\Detalle_Cita;
+use App\Models\Esp_Per;
+use App\Models\Personal;
+use App\Models\Servicio;
+
 
 class CitaRequest extends FormRequest
 {
