@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->double('precio', 10, 2);
-            $table->string('descripcion');
+            $table->string('descripcion')->nullable();
             $table->boolean('activo')->default(true);
             $table->string('imagen');
             $table->integer('tiempo_estimado');

@@ -11,4 +11,10 @@ class Especialidad extends Model
         'activo',
         'nom'
     ];
+
+
+    public function personal()
+    {
+        return $this->belongsToMany(Personal::class, 'esp_per', 'especialidad_id', 'personal_id');
+    }
 }

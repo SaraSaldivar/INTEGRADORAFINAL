@@ -14,4 +14,9 @@ protected $fillable = [
 
 
 
+public function users()
+{
+    return $this->hasMany(User::class, 'rol_id');
+}
+
 }

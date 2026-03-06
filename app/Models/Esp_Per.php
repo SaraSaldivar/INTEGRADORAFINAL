@@ -11,4 +11,6 @@ class Esp_Per extends Model
         'personal_id'
     ];
 
+
+
 }

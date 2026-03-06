@@ -15,4 +15,18 @@ class Servicio extends Model
     'tiempo_estimado',
     'tipo_servicio_id',
 ];
+
+
+    public function tipoServicio()
+    {
+        return $this->belongsTo(Tipo_Servicio::class, 'tipo_servicio_id');
+    }
+
+    public function detalleCitas()
+    {
+        return $this->hasMany(Detalle_Cita::class, 'servicio_id');
+    }
 }
+
+
+

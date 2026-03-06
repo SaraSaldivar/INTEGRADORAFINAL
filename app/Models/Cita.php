@@ -15,4 +15,21 @@ class Cita extends Model
         'cliente_id',
     ];
 
+    public function personal()
+    {
+        return $this->belongsTo(Personal::class);
+    }
+
+    public function detalles()
+    {
+        return $this->hasMany(Detalle_Cita::class);
+    }
+
+    public function cliente()
+    {
+        return $this->belongsTo(Cliente::class);
+    }
+
+    
+
 }

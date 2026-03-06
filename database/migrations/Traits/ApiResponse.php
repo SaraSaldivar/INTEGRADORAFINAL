@@ -1,0 +1,18 @@
+<?php
+
+namespace App;
+
+trait ApiResponse
+{
+    
+
+    public function apiResponse($data, $message = null, $code = 200, $error = null)
+    {
+        return response()->json([
+            'status' => 'success',
+            'error' => $error,
+            'data' => $data,
+            'message' => $message,
+        ], $code);
+    }
+}
