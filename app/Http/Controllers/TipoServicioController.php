@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TipoServicio;
+use App\Models\Tipo_Servicio;
 use Illuminate\Http\Request;
 
 class TipoServicioController extends Controller
@@ -18,7 +18,7 @@ class TipoServicioController extends Controller
     // GET /api/tipo-servicio/{id}
     public function show($id)
     {
-        $tipo = TipoServicio::find($id);
+        $tipo = Tipo_Servicio::find($id);
 
         if (!$tipo) {
             return response()->json([
@@ -37,7 +37,7 @@ class TipoServicioController extends Controller
             'activo' => 'boolean'
         ]);
 
-        $tipo = TipoServicio::create([
+        $tipo = Tipo_Servicio::create([
             'nombre' => $request->nombre,
             'activo' => $request->activo ?? true
         ]);
@@ -51,7 +51,7 @@ class TipoServicioController extends Controller
     // PUT /api/tipo-servicio/{id}
     public function update(Request $request, $id)
     {
-        $tipo = TipoServicio::find($id);
+        $tipo = Tipo_Servicio::find($id);
 
         if (!$tipo) {
             return response()->json([
@@ -75,7 +75,7 @@ class TipoServicioController extends Controller
     // DELETE /api/tipo-servicio/{id}
     public function destroy($id)
     {
-        $tipo = TipoServicio::find($id);
+        $tipo = Tipo_Servicio::find($id);
 
         if (!$tipo) {
             return response()->json([
